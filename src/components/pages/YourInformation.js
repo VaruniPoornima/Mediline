@@ -6,6 +6,7 @@ import Doctor from "../doctor/Doctor";
 import ClinicType from "../form-elements/ClinicType";
 import Steps from "../Steps";
 import exImg from '../../img/ex.svg';
+import FormInfo from "../form-elements/Form";
 import { Link } from "react-router-dom";
 
 export default function BookAppoinment() {
@@ -13,26 +14,31 @@ export default function BookAppoinment() {
     <div className="book-apoinment">
       <Layout>
         <div className="container">
+          <div className="inner-nav">
           <Steps />
+          <Link to='/' className="btn-link">Back</Link> 
+          </div>
+
           <Doctor />
           <div className="card-grid">
             <div className="note-wrap">
-              <ClinicType />
-              <small className="note">
-                <img src={exImg} alt="" />
-                Please note that we are having limited intakes for physical clinic at
+             <label>Personal Information</label>
+              <small className="note mt-0">
+                Please note that we are having limited<br/>intakes for physical clinic at
                 the moment
               </small>
             </div>
-            <div className="card-wrap">
-              <DatePick />
-              <TimePicker />
+            <div className="form-wrap">
+              <FormInfo/>
             </div>
           </div>
           <div className="btn-group-row">
-            <Link to="/user-details" className="btn btn-primary">
-              Continue
+          <Link to="/" className="btn btn-sec">
+            Previous
             </Link>
+            <button className="btn btn-primary">
+              Continue
+            </button>
           </div>
         </div>
       </Layout>

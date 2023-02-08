@@ -4,6 +4,9 @@
     display: flex;
     flex-direction: row;
     list-style: none;
+    margin-left: 0;
+    padding-left: 0;
+    margin-bottom: 0;
   }
   .steps-list__group {
     display: flex;
@@ -70,7 +73,8 @@
     &__group {
       h4 {
         font-size: 26px;
-        // margin-bottom: 5px;
+        margin-bottom: 0;
+        font-weight: 700;
       }
       small {
         color: #979797;
@@ -136,6 +140,19 @@
   padding: 20px;
 }
 
+.form-wrap{
+  display: block;
+  padding: 20px;
+  background: #ffffff;
+  box-shadow: 0px 100px 80px rgba(184, 180, 180, 0.07),
+    0px 41.7776px 33.4221px rgba(184, 180, 180, 0.0503198),
+    0px 22.3363px 17.869px rgba(184, 180, 180, 0.0417275),
+    0px 12.5216px 10.0172px rgba(184, 180, 180, 0.035),
+    0px 6.6501px 5.32008px rgba(184, 180, 180, 0.0282725),
+    0px 2.76726px 2.21381px rgba(184, 180, 180, 0.0196802);
+  border-radius: 6px;
+}
+
 .card-grid {
   display: grid;
   grid-template-columns: 1fr 2fr;
@@ -144,6 +161,7 @@
   padding-bottom: 0;
 }
 
+
 .tp {
   list-style: none;
   display: grid;
@@ -151,6 +169,7 @@
   grid-template-rows: repeat(3, 1fr);
   grid-column-gap: 10px;
   grid-row-gap: 10px;
+  padding-left: 0;
 
   li {
     .time-wrap {
@@ -179,5 +198,42 @@
     align-items: flex-start;
   img{
     margin-right: 5px;
+  }
+}
+
+.mt-0{
+  margin-top: 0;
+}
+
+.btn-set{
+  display: flex;
+    flex-direction: column;
+
+    .btn-light{
+      color: #676767;
+      background-color: #e8e8e8;
+    }
+}
+
+.btn-group-row{
+  padding: 15px 0;
+    display: flex;
+    justify-content: flex-end;
+    gap: 15px;
+    .btn-sec{
+      background-color: white;
+    color: $brand-primary;
+    }
+}
+
+
+.inner-nav{
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  a{
+    display: block;
+    margin-top: 10px;
+    text-decoration: none;
   }
 }
